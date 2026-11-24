@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CI/CD Assignment 3 - FA23-BSE-090</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 640px; margin: 40px auto; color: #222; }
+    h1 { color: #1a4f8b; }
+    .card { border: 1px solid #ccc; border-radius: 8px; padding: 16px; margin-top: 16px; }
+    input { padding: 6px; width: 60%; }
+    button { padding: 6px 12px; margin-left: 4px; }
+  </style>
+</head>
+<body>
+  <h1 id="main-heading">Cloud Computing CI/CD Assignment</h1>
+  <p id="student">Name: Sufian Siddique</p>
+  <p id="roll">Roll number: FA23-BSE-090</p>
+
+  <div class="card">
+    <button id="greet-btn" onclick="document.getElementById('message').textContent='Pipeline deployment successful!'">Show message</button>
+    <p id="message"></p>
+  </div>
+
+  <div class="card">
+    <label for="text-input">Enter some text:</label><br>
+    <input id="text-input" type="text" placeholder="Type here">
+    <button id="submit-btn" onclick="showText()">Submit</button>
+    <p id="output"></p>
+  </div>
+
+  <script>
+    function showText() {
+      var value = document.getElementById('text-input').value.trim();
+      var out = document.getElementById('output');
+      out.textContent = value ? 'You entered: ' + value : 'Please enter some text.';
+    }
+  </script>
+</body>
+</html>
